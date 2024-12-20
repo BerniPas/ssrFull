@@ -5,3 +5,24 @@
         Lista de Productos
     </h1>
 </div>
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each productos}}
+            <tr>
+                <td>{{nombre}}</td>
+                <td>{{precio}}</td>
+                <td>{{stock}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

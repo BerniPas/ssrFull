@@ -6,7 +6,13 @@ const Producto = require('../models/productModel');
 //CRUD de Productos que responde a la ruta '/product'
 
 router.get("/", async (req, res) => {
-    res.render("listadoProductos");
+
+    const productos = await Producto.find();
+
+    res.render("listadoProductos", {
+        productos
+    });
+    
 });
 
 router.get("/formulario", async (req, res) => {
