@@ -23,7 +23,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(morgan('dev')); 
 
-
 // Rutas de la aplicación como middleware
 app.use('/', routerHome);
 app.use('/user', routerUser);
